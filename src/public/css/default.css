@@ -1,0 +1,205 @@
+html, body {
+    height: 100%;
+    background: #131222;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Nunito', sans-serif;
+    margin: 0 0 15px;
+    color: #fff;
+    font-weight: 700;
+}
+
+p {
+    margin: 0 0 15px;
+    color: #c4d5f6;
+}
+
+
+body {
+    color: #c4d5f6;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    text-align: left;
+    overflow-x: hidden;
+    line-height: 26px;
+}
+
+ul {
+    list-style: outside none none;
+    margin: 0;
+    padding: 0;
+}
+
+.topbar-left ul li {
+    display: inline-block;
+}
+
+
+.topbar-left ul li a {
+    color: #c4d5f6;
+    display: block;
+    margin-right: 20px;
+    padding: 11px 0;
+    text-decoration: none;
+    font-size: 15px;
+    letter-spacing: 0.60px;
+}
+
+.h-one {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+    padding-bottom:10px;
+}
+
+.topbar {
+    background: #171627;
+}
+
+
+.header-x {
+    background: #1E1D32;
+}
+
+.logo {
+    display: block;
+}
+
+.logo a {
+    display: inline-block;
+    height: auto;
+    padding: 25px 0;
+}
+
+.header-right-link {
+    float: right;
+    width: 180px;
+    padding: 37px 0px;
+    margin-left: 40px;
+    text-align: right;
+}
+
+.navbar.navbar-default {
+    float: right;
+}
+.navbar-default {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+}
+.navbar {
+    border: medium none;
+    margin-bottom: 0;
+}
+
+.navbar-collapse {
+    padding-left: 0px;
+}
+
+.main-menu ul.navbar-nav li {
+    float: left;
+    position: relative;
+}
+.navbar-nav li a {
+    padding: 30px 15px;
+    color: #fff;
+}
+
+
+.navbar-nav li a.active {
+    color: greenyellow  !important;
+}
+
+.navbar-nav li a {
+    color: #fff;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 40px 15px;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.s-menu {
+    padding: 10px 20px;
+    border: 1px solid #d5057f;
+    background: #d5057f;
+    color: #fff;
+    transition: 0.4s;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.section-headline {
+    padding-bottom: 40px;
+    position: relative;
+}
+
+.section-headline h3 {
+    font-size: 40px;
+    text-transform: capitalize;
+    line-height: 48px;
+    color: #fff;
+}
+
+
+.compare-content {
+    position: relative;
+}
+
+.compare-box {
+    width: 100%;
+    margin: 0 auto;
+    background: #26253f;
+    position: relative;
+}
+
+.compare-content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.compare-content th {
+    text-align: left;
+    padding: 8px 10px 8px 20px;
+    height: 80px;
+    text-transform: uppercase;
+}
+
+.compare-content .inside th {
+    text-align: left;
+    padding: 8px 10px 8px 10px;
+    height: 80px;
+    text-transform: uppercase;
+}
+
+.compare-content td {
+        text-align: left;
+        padding: 8px 10px 8px 15px;
+        height: 60px;
+}
+
+.compare-content tr:nth-child(even) {
+    background-color: #171627;
+}
+
+.compare-content th .img {
+    display: inline-block;
+    margin-right: 20px;
+    width: 80px;
+    height: 80px;
+    background:white;
+    border-radius: 50%;
+}
+
+
+.compare-content th .img-inside {
+    display: inline-block;
+    margin-right: 20px;
+    width: 50px;
+    height: 50px;
+    background:white;
+    border-radius: 50%;
+}
