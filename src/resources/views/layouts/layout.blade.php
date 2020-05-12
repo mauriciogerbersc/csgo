@@ -55,7 +55,7 @@
             <div class="col-md-8 col-sm-8 col-xs-12">
               <div class="topbar-left">
               <ul>
-                <li><a href="">contact@site.com</a></li>
+                <li><a href="">contact@csgocompare.com</a></li>
               </ul>
               </div>
             </div>
@@ -71,20 +71,20 @@
             <div class="col-md-3 col-sm-3">
               <div class="logo">
                 <a class="navbar-brand" href="/">
-                  LOGO Q N SEI QUAL VAI SER
+                  <img src="{{ asset('img/logo.png') }}" width="180" alt="">
                 </a>
               </div>
             </div>
             <div class="col-md-9 col-sm-9">
                 <!-- mainmenu start -->
-                <nav class="navbar align-items-center navbar-expand-lg " style="padding: 25px 0;">
+                <nav class="navbar align-items-right navbar-expand-lg" >
                 
                   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Alterna navegação">
                     <span class="navbar-toggler-icon"></span>
                   </button>
 
-                  <div class="collapse navbar-collapse text-center justify-content-center align-self-center" id="navbarNavDropdown">
-                    <ul class="navbar-nav ">
+                  <div class="collapse navbar-collapse text-center justify-content-center align-self-right" id="navbarNavDropdown" >
+                    <ul class="navbar-nav " style="padding: 25px 0; float:right;">
                       
                       <li>
                         <a  @if($current=="pistols" ) class="active" @else class="" @endif href="{{ route('pistols') }}">Pistols</a>
