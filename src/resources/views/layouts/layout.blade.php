@@ -6,31 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="compare firerate, ammo, awards, recoil from your favorite csgo guns">
     <meta name="author" content="csgogunscompare">
-    <title>csgogunscompare - Compare CSGO Guns</title>
+    <title>csgocompare - Compare CSGO Guns</title>
 
-   
+
      <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="{{ asset('css/default.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,300;0,400;0,600;0,700;1,200;1,300;1,700&display=swap" rel="stylesheet">
     <meta name="theme-color" content="#563d7c">
-
     <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-      }
-
       @media (min-width: 768px) {
         .bd-placeholder-img-lg {
           font-size: 3.5rem;
         }
       }
-      .themed-grid-col {
+      /*.themed-grid-col {
         padding-top: 15px;
         padding-bottom: 15px;
         background-color: rgba(86, 61, 124, .15);
@@ -42,7 +32,7 @@
         margin-bottom: 30px;
         background-color: rgba(0, 123, 255, .15);
         border: 1px solid rgba(0, 123, 255, .2);
-      }
+      }*/
     </style>
   </head>
   <body>
@@ -111,9 +101,8 @@
 
     @yield('content')
 
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js" integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30=" crossorigin="anonymous"></script>
-
+  <script src="{{ asset('js/jquery.js') }}"></script>
+  <script src="{{ asset('js/jquery-ui.js') }}"></script>
   @yield("scripts")
 
 
