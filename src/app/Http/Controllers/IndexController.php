@@ -41,6 +41,10 @@ class IndexController extends Controller
                 <td class='.$gun->id.'><strong>'.$gun->name.'</strong></td>
             </tr>
             <tr>
+            <td>Price:</td>
+                <td>$ '.$gun->gun_price.'</td>
+            </tr>
+            <tr>
                 <td>Ammo:</td>
                 <td>'.$gun->ammo.'</td>
             </tr>

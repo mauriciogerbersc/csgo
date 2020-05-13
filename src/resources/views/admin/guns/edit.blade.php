@@ -33,7 +33,7 @@
             <label for="categoria_id">Categoria</label>
             <select class="form-control" name="categoria_id">
                 @foreach($categorias as $cat)
-                <option value="{{ $cat->id }}">{{ $cat->categoria }}</option>
+                <option value="{{ $cat->id }}" {{ $cat->id == $gun->categoria_id ? "selected" : ""}}>{{ $cat->categoria }}</option>
                 @endforeach
             </select>
         </div>
@@ -58,6 +58,11 @@
     </div>
 
     <div class="form-row">
+
+        <div class="form-group col-md-6">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="gun_price" name="gun_price" value="{{ $gun->gun_price }}">
+        </div>
 
         <div class="form-group col-md-6">
             <label for="ammo">Ammo</label>

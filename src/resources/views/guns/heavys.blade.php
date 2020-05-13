@@ -19,9 +19,14 @@
                             </tr>
                         </thead>
                         <tbody>
+
                         <tr>
                             <td>Name:</td>
                             <td><strong>{{ $heavy->name }}</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Price:</td>
+                            <td><strong>$ {{ $heavy->gun_price }}</strong></td>
                         </tr>
                         <tr>
                             <td>Ammo:</td>

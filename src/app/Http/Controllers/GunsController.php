@@ -72,7 +72,8 @@ class GunsController extends Controller
             'accurate_range' => $request->accurate_range,
             'armor_penetration' => $request->armor_penetration,
             'categoria_id' => $request->categoria_id,
-            'jogo_id' => $request->jogo_id
+            'jogo_id' => $request->jogo_id,
+            'gun_price' => $request->gun_price
         ]);
         DB::commit();
 
@@ -144,6 +145,7 @@ class GunsController extends Controller
             $gun->armor_penetration = $request->input('armor_penetration');
             $gun->categoria_id = $request->input('categoria_id');
             $gun->jogo_id = $request->input('jogo_id');
+            $gun->gun_price = $request->input('gun_price');
             $gun->save();
         DB::commit();
 

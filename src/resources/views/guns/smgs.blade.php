@@ -24,6 +24,10 @@
                             <td><strong>{{ $smg->name }}</strong></td>
                         </tr>
                         <tr>
+                            <td>Price:</td>
+                            <td><strong>$ {{ $smg->gun_price }}</strong></td>
+                        </tr>
+                        <tr>
                             <td>Ammo:</td>
                             <td>{{ $smg->ammo }}</td>
                         </tr>

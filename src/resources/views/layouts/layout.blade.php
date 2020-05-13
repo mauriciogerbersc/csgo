@@ -5,8 +5,8 @@
     @include('analytics')
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="compare firerate, ammo, awards, recoil from your favorite csgo guns">
-    <meta name="author" content="csgogunscompare">
+    <meta name="description" content="compare firerate, ammo, awards, recoil from your favorite csgo guns - counter-strike, cs global offensive">
+    <meta name="author" content="csgocompare">
     <title>csgocompare - Compare CSGO Guns</title>
 
 
