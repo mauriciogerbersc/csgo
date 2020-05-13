@@ -2,6 +2,7 @@
 <!doctype html>
 <html lang="en">
   <head>
+    @include('analytics')
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="compare firerate, ammo, awards, recoil from your favorite csgo guns">
