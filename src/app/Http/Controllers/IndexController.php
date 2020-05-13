@@ -22,7 +22,7 @@ class IndexController extends Controller
 
         $search = $request->gun;
         $guns = Gun::orderby('name','asc')
-        ->select('name','ammo','award','damage','firerate','recoil_control','accurate_range','armor_penetration', 'gun_image')
+        ->select('id','name','ammo','award','damage','firerate','recoil_control','accurate_range','armor_penetration', 'gun_image')
         ->where('name', 'like', '%' .$search . '%')->get();
        
         $total_row = $guns->count();
@@ -30,17 +30,16 @@ class IndexController extends Controller
         if($total_row > 0 && $search != ''){
         foreach ($guns as $key=>$gun) {
             $output =
-
             '<thead>
                 <tr style="background-color: #d5057f !important;color: #fff;">
                     <th><img src="files/'.$gun->gun_image.'" class="img">Attribute</th>
                     <th>Attribute Info</th>
                 </tr>
             </thead>
-            <tbody>
+            <tbody class="conteudo">
             <tr>
                 <td>Name:</td>
-                <td><strong>'.$gun->name.'</strong></td>
+                <td class='.$gun->id.'><strong>'.$gun->name.'</strong></td>
             </tr>
             <tr>
                 <td>Ammo:</td>
@@ -48,27 +47,27 @@ class IndexController extends Controller
             </tr>
             <tr>
                 <td>Award:</td>
-                <td>$ '.$gun->award.'</td>
+                <td class="awards">'.$gun->award.'</td>
             </tr>
             <tr>
                 <td>Damage:</td>
-                <td>'.$gun->damage.'</td>
+                <td class="damage">'.$gun->damage.'</td>
             </tr>
             <tr>
                 <td>Firerate:</td>
-                <td>'.$gun->firerate.'</td>
+                <td class="firerate">'.$gun->firerate.'</td>
             </tr>
             <tr>
                 <td>Recoil Control:</td>
-                <td>'.$gun->recoil_control.'</td>
+                <td class="recoil_control">'.$gun->recoil_control.'</td>
             </tr>
             <tr>
                 <td>Accurate Range:</td>
-                <td>'.$gun->accurate_range.' m</td>
+                <td class="accurate_range">'.$gun->accurate_range.'</td>
             </tr>
             <tr>
                 <td>Armor Penetration:</td>
-                <td>'.$gun->armor_penetration.'</td>
+                <td class="armor_penetration">'.$gun->armor_penetration.'</td>
             </tr>
             </tbody>';
         }
