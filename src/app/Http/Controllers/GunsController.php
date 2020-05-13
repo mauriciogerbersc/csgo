@@ -9,7 +9,15 @@ use App\Jogos;
 use App\CategoriaArma;
 
 class GunsController extends Controller
-{
+{   
+
+       
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *

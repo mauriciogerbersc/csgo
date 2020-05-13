@@ -24,7 +24,6 @@ Route::get('/heavy', 'IndexController@heavy')->name('heavy');
 Route::get('/rifles', 'IndexController@rifles')->name('rifles');
 Route::post('/gunsearch', 'IndexController@search')->name('gunsearch');
 
-
 Route::get('/admin', 'AdminController@index');
 Route::get('/admin/jogos', 'JogosController@index')->name('listar_jogos');
 Route::get('/admin/jogos/create', 'JogosController@create');
