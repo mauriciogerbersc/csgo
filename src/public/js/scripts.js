@@ -1,9 +1,8 @@
-
 $(document).ready(function(){
   
   fetch_customer_data();
 
-  function compare_tables(){
+  compare_tables = function (){
      var rowCountRight  = $('.right  >tbody >tr').length;
      var rowCountLeft   = $('.left >tbody >tr').length;
 
@@ -56,26 +55,4 @@ $(document).ready(function(){
      }
   }
 
-  function fetch_customer_data(query = '', side = '') {
-    if(side!==''){
-      $.ajax({
-          url: "{{route('gunsearch')}}",
-          method: 'post',
-          data: {gun: query, _token: $('input[name="_token"]').val()},
-          dataType: 'json',
-          success: function (data) {
-              $("."+side).html(data.table_data);
-          },complete: function(){
-           
-              compare_tables();
-          }
-      })
-    }
-  }
-  $(document).on('keyup', '.gun', function () {
-    var query = $(this).val();
-    var data_attr = $(this).data('attr');
-    
-    fetch_customer_data(query, data_attr);
-  });
 });

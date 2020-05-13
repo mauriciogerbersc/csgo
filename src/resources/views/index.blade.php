@@ -59,4 +59,27 @@
 
 @section('scripts')
 <script src="{{ asset('js/scripts.js') }}"></script>
+<script>
+  function fetch_customer_data(query = '', side = '') {
+    if(side!==''){
+      $.ajax({
+          url: "{{route('gunsearch')}}",
+          method: 'post',
+          data: {gun: query, _token: $('input[name="_token"]').val()},
+          dataType: 'json',
+          success: function (data) {
+              $("."+side).html(data.table_data);
+          },complete: function(){
+              compare_tables();
+          }
+      })
+    }
+  }
+  $(document).on('keyup', '.gun', function () {
+    var query = $(this).val();
+    var data_attr = $(this).data('attr');
+    
+    fetch_customer_data(query, data_attr);
+  });
+</script>
 @endsection
