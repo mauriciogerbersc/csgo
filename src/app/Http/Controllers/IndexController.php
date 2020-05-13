@@ -22,7 +22,6 @@ class IndexController extends Controller
 
         $search = $request->gun;
         $guns = Gun::orderby('name','asc')
-        ->select('id','name','ammo','award','damage','firerate','recoil_control','accurate_range','armor_penetration', 'gun_image')
         ->where('name', 'like', '%' .$search . '%')->get();
        
         $total_row = $guns->count();
@@ -32,7 +31,7 @@ class IndexController extends Controller
             $output =
             '<thead>
                 <tr style="background-color: #d5057f !important;color: #fff;">
-                    <th><img src="files/'.$gun->gun_image.'" class="img">Attribute</th>
+                    <th><img src="files/'.$gun->gun_image.'" class="img" alt="'.$gun->categoria->categoria . ' - CSGO - ' . $gun->name .'" title="'.$gun->categoria->categoria . ' - CSGO - ' . $gun->name .'" >Attribute</th>
                     <th>Attribute Info</th>
                 </tr>
             </thead>

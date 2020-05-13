@@ -7,14 +7,14 @@
     <div class="container">
         <div class="row">
             @foreach($pistols as $pistol)
-            <div class="col-4">
+            <div class="col-md-4 col-sm-4 col-xs-4">  
             <div class="compare-content py-3 pb-2">
                 <div class="compare-box">
                   <div class="compare-table inside">
                     <table>
                         <thead>
                             <tr style="background-color: #d5057f !important;color: #fff;">
-                                <th class=><img src="files/{{ $pistol->gun_image }}" class="img-inside">Attribute</th>
+                                <th class=><img src="files/{{ $pistol->gun_image }}" alt="{{ $pistol->categoria->categoria }} - CSGO - {{ $pistol->name }}" title="{{ $pistol->categoria->categoria }} - CSGO - {{ $pistol->name }}" class="img-inside">Attribute</th>
                                 <th>Attribute Info</th>
                             </tr>
                         </thead>
