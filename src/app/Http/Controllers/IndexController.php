@@ -7,6 +7,90 @@ use App\Gun;
 
 class IndexController extends Controller
 {
+
+
+    function str_allowed($str, $arr) {
+        foreach ($arr as $bad_string) {
+            if(strpos($str, $bad_string) !== false)
+                return false; // bad string detected, return false
+        }
+        return true; // if we got this far means everything's good return true
+    }
+
+    function group_by($key, $data) {
+        $result = array();
+    
+        foreach($data as $val) {
+            if(array_key_exists($key, $val)){
+                $result[$val[$key]][] = $val;
+            }else{
+                $result[""][] = $val;
+            }
+        }
+    
+        return $result;
+    }
+
+
+    public function readJSON(Request $request){
+       // echo  storage_path();
+        $path = storage_path() . "/guns.json"; // ie: /var/www/laravel/app/storage/json/filename.json
+
+        $json = json_decode(file_get_contents($path), true);
+       // echo "<pre> , 'MAC-10', 'SSG 08', 'M4A1-S'";
+        
+        /*$todasAsArmas = Gun::all();
+
+        $armasPermitidas = array();
+        foreach($todasAsArmas as $key=>$val){
+            $armasPermitidas[] = $val['name'];
+        }
+        */
+        $armasPermitidas = array($request->gun);
+        
+        $array = array();
+        foreach($json['data'] as $key=>$val){
+            if(strpos($val['market_hash_name'], "|") !== false)
+            {
+                $divide_string = explode("|", $val['market_hash_name']);
+                $gun = $divide_string[0];
+                $skin = $divide_string[1];
+                if(!$this->str_allowed($gun, $armasPermitidas)){
+                    $skinOut = explode(" ",trim($skin));
+                    $array[] = array(
+                        'gun' => trim($gun), 
+                        'skin' => trim($skinOut[0]),
+                        'imagem' => $val['image'], 
+                        'border_color' => $val['border_color'],
+                        'price_min' => $val['prices']['min'],
+                        'price_max' => $val['prices']['max']
+                    );
+                }
+                    
+            } 
+        }   
+  
+       // echo "<pre>";
+
+        $novoArray = $this->group_by('gun', $array);
+     
+        $arrayDeArmas = array();
+        foreach($novoArray as $key=>$guns){
+            foreach($guns as $gun){
+                $arrayDeArmas[$key][$gun['skin']] = array(
+                    'border_color' => $gun['border_color'], 
+                    'imagem' => $gun['imagem'], 
+                    'price_min' => $gun['price_min'], 
+                    'price_max' => $gun['price_max']
+                );
+            }
+        }
+        
+        //print_r($arrayDeArmas);
+        //exit;
+        return view('skins', compact('arrayDeArmas'));
+  
+    }   
     /**
      * Display a listing of the resource.
      *

@@ -14,7 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@index');
-
+Route::get('/skins/{gun}', 'IndexController@readJSON');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

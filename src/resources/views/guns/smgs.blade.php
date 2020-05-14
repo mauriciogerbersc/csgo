@@ -21,7 +21,7 @@
                         <tbody>
                         <tr>
                             <td>Name:</td>
-                            <td><strong>{{ $smg->name }}</strong></td>
+                            <td><a href="/skins/{{$smg->name}}"><strong>{{ $smg->name }}</strong></a></td>
                         </tr>
                         <tr>
                             <td>Price:</td>

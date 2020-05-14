@@ -22,7 +22,7 @@
 
                         <tr>
                             <td>Name:</td>
-                            <td><strong>{{ $heavy->name }}</strong></td>
+                            <td><a href="/skins/{{$heavy->name}}"><strong>{{ $heavy->name }}</strong></a></td>
                         </tr>
                         <tr>
                             <td>Price:</td>

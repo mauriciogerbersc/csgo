@@ -15,6 +15,11 @@ p {
     color: #c4d5f6;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body, html {
 	font-family: 'Lato';
 	font-size: 16px;
@@ -302,3 +307,32 @@ ul {
     border-radius: 50%;
 }
 
+.single-gun {
+    
+    text-align: center;
+    z-index: 1;
+    overflow: hidden;
+    transition: 0.4s;
+    padding: 40px 30px;
+    border-radius: 5px;
+    background: #26253f;
+
+}
+.gun-img {
+   
+        position: relative;
+        display: inline-block;
+    
+}
+.gun-content {
+    padding: 20px 0px 0px;
+    
+}
+.gun-content h4 {
+     display: inline-block;
+        font-size: 24px;
+        margin-bottom: 0;
+        padding: 0 0 10px;
+        font-weight: 600;
+
+}
