@@ -59,6 +59,11 @@
     <div class="form-row">
 
         <div class="form-group col-md-6">
+            <label for="price">Price</label>
+            <input type="text" class="form-control" id="gun_price" name="gun_price">
+        </div>
+
+        <div class="form-group col-md-6">
             <label for="ammo">Ammo</label>
             <input type="text" class="form-control" id="ammo" name="ammo" value="">
         </div>
