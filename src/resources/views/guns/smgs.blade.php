@@ -21,7 +21,7 @@
                         <tbody>
                         <tr>
                             <td>Name:</td>
-                            <td><a href="/skins/{{$smg->name}}"><strong>{{ $smg->name }}</strong></a></td>
+                            <td><strong>{{ $smg->name }}</strong></td>
                         </tr>
                         <tr>
                             <td>Price:</td>
@@ -55,7 +55,15 @@
                             <td>Armor Penetration:</td>
                             <td>{{ $smg->armor_penetration }}</td>
                         </tr>
-                        </tbody>
+                        
+                            <tr>
+                                <td colspan="2">
+                                    <div class="view_button text-center">
+                                        <a class="btn" href="/skins/{{$smg->name}}">View Skins</a>
+                                   </div>
+                                </td>
+                            </tr>
+                        
                     </table>
                   </div>
                 </div>

@@ -122,7 +122,7 @@ class IndexController extends Controller
             <tbody class="conteudo">
             <tr>
                 <td>Name:</td>
-                <td class='.$gun->id.'><strong>'.$gun->name.'</strong></td>
+                <td class='.$gun->id.'><a href="/skins/'.$gun->name.'" target="_blank" class="btn">'.$gun->name.'</a></td>
             </tr>
             <tr>
             <td>Price:</td>

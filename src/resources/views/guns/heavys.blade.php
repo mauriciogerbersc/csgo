@@ -56,6 +56,13 @@
                             <td>Armor Penetration:</td>
                             <td>{{ $heavy->armor_penetration }}</td>
                         </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="view_button text-center">
+                                    <a class="btn" href="/skins/{{$heavy->name}}">View Skins</a>
+                               </div>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                   </div>

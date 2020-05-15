@@ -29,8 +29,8 @@
           </div>
 					<div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-xs-6">
 						<ul class="icon_list_news social_icon_topheader2">
-                            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                            <li> <a href="#"><i class="fab fa-twitter"></i></a></li>
+     
+                <li> <a href="https://twitter.com/csgocomparecom" target="_blank"><i class="fab fa-twitter"></i></a></li>
 						</ul>
 						</div>
 							

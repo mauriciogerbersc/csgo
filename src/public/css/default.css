@@ -20,6 +20,15 @@ img {
     height: auto;
 }
 
+.conteudo .btn {
+    background: #0EC929;
+    color: #fff;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 2px 15px;
+    line-height: 26px;
+    border-radius: 3px;
+}
 body, html {
 	font-family: 'Lato';
 	font-size: 16px;
@@ -210,19 +219,6 @@ ul {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .s-menu {
     padding: 10px 20px;
     border: 1px solid #d5057f;
@@ -335,4 +331,20 @@ ul {
         padding: 0 0 10px;
         font-weight: 600;
 
+}
+
+
+.view_button .btn {
+    padding: 10px 30px 10px 30px;
+    background:#5686ff;
+    border: none;
+    color: #FFF;
+    font-weight:bold;
+    vertical-align: middle;
+    /*added in to align*/
+}
+.view_button .btn:hover {
+    background: #5686ff;
+    text-decoration:underline;
+    cursor: pointer;
 }

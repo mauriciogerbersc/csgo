@@ -55,6 +55,13 @@
                             <td>Armor Penetration:</td>
                             <td>{{ $pistol->armor_penetration }}</td>
                         </tr>
+                        <tr>
+                            <td colspan="2">
+                                <div class="view_button text-center">
+                                    <a class="btn" href="/skins/{{$pistol->name}}">View Skins</a>
+                               </div>
+                            </td>
+                        </tr>
                         </tbody>
                     </table>
                   </div>
