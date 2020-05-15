@@ -33,7 +33,7 @@ class IndexController extends Controller
 
 
     public function readJSON(Request $request){
-       // echo  storage_path();
+      
         $path = storage_path() . "/guns.json"; // ie: /var/www/laravel/app/storage/json/filename.json
 
         $json = json_decode(file_get_contents($path), true);
@@ -86,9 +86,11 @@ class IndexController extends Controller
             }
         }
         
+        $type = $request->type;
+        $gun = $request->gun;
         //print_r($arrayDeArmas);
         //exit;
-        return view('skins', compact('arrayDeArmas'));
+        return view('skins', compact('arrayDeArmas', 'gun', 'type'));
   
     }   
     /**
@@ -215,92 +217,5 @@ class IndexController extends Controller
                                
         return view('guns.gun',compact('weapons','type'));
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function pistols(Request $request)
-    {
-        $filter = $request->query('price');
-        
-        $pistols = Gun::where('categoria_id', '=' , 1)->get();
-        return view('guns.pistols', compact('pistols'));
-    }
-
-
-    public function heavy()
-    {
-        $heavys = Gun::where('categoria_id', '=' , 3)->get();
-        return view('guns.heavys', compact('heavys'));
-    }
-
-
-    public function smgs()
-    {
-        $smgs = Gun::where('categoria_id', '=' , 4)->get();
-        return view('guns.smgs', compact('smgs'));
-    }
-
-    public function rifles()
-    {
-        $rifles = Gun::where('categoria_id', '=' , 2)->get();
-        return view('guns.rifles', compact('rifles'));
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+   
 }

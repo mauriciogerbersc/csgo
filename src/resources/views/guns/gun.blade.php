@@ -4,15 +4,29 @@
 
 <section class="compare">
 
+    <div class="header-section">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="py-3">
+                <ol class="site-breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">{{$type}}</li>
+                </ol>
+            </nav>
+            <h1 class="section"><span class="text-content">{{$type}}</span>  detailed statistics</h1>
+        </div>
+    </div>
+
     <div class="container">
         <div class="row">
 
             <div class="col-md-3 order-md-1 py-3">
                 <div class="filter_sidebar jb_cover">
-                   <div class="filter_header">
+                <div class="filter_header">
                         <h1>Sort By</h1>
-                   </div>
-                   <div class="filter_category jb_cover">
+                </div>
+                <div class="filter_category jb_cover">
                         <p>
                             Price 
                             <span style="float:right;">
@@ -34,7 +48,7 @@
                                     <span class="d-flex"><i class="fas fa-sort-amount-down"></i>
                                 </a>
                             </span>
-                           
+                        
                         </p>
                         <p>
                             Damage
@@ -80,7 +94,7 @@
                                 </a>
                             </span>
                         </p>
-                   </div>
+                </div>
                 </div>
             </div>
 
@@ -110,37 +124,37 @@
                                         </tr>
                                         <tr>
                                             <td>Ammo:</td>
-                                            <td>{{ $weapon->ammo }}</td>
+                                            <td><strong>{{ $weapon->ammo }}</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Award:</td>
-                                            <td>$ {{ $weapon->award }}</td>
+                                            <td><strong>$ {{ $weapon->award }}</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Damage:</td>
-                                            <td>{{ $weapon->damage }}</td>
+                                            <td><strong>{{ $weapon->damage }}</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Firerate:</td>
-                                            <td>{{ $weapon->firerate }}</td>
+                                            <td><strong>{{ $weapon->firerate }}</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Recoil Control:</td>
-                                            <td>{{ $weapon->recoil_control }}</td>
+                                            <td><strong>{{ $weapon->recoil_control }}</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Accurate Range:</td>
-                                            <td>{{ $weapon->accurate_range }} m</td>
+                                            <td><strong>{{ $weapon->accurate_range }} m</strong></td>
                                         </tr>
                                         <tr>
                                             <td>Armor Penetration:</td>
-                                            <td>{{ $weapon->armor_penetration }}</td>
+                                            <td><strong>{{ $weapon->armor_penetration }}</strong></td>
                                         </tr>
                                         <tr>
                                             <td colspan="2">
                                                 <div class="view_button text-center">
-                                                    <a class="btn" href="/skins/{{$weapon->name}}">View Skins</a>
-                                            </div>
+                                                    <a class="btn" href="/skins/{{$weapon->name}}/{{$type}}">View Skins</a>
+                                                </div>
                                             </td>
                                         </tr>
                                         </tbody>

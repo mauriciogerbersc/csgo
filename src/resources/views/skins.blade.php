@@ -1,20 +1,39 @@
-@extends('layouts/layout', ["current" => "index"])
+@extends('layouts/layout', ["current" => $type])
 
 
 @section('content')
-<section class="compare py-5 pb-5">
+<section class="compare ">
+
+    <div class="header-section">
+        <div class="container">
+            <nav aria-label="breadcrumb" class="py-3">
+                <ol class="site-breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/">Home</a>
+                    </li>
+                    <li class="breadcrumb-item">
+                        <a href="/weapons/{{$type}}">{{$type}}</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">{{$gun}} - Skin market</li>
+                </ol>
+            </nav>
+            <h1 class="section"><span class="text-content">{{$gun}}</span> skins market</h1>
+        </div>
+    </div>
+
     <div class="container">
       
             @foreach($arrayDeArmas as $key => $guns)
             <div class="row">
 
                 <div class="col-md-12 col-sm-12 col-xs-12">
-                  <div class="section-headline text-center">
+                  <div class="section-headline text-center py-5 pb-5">
                     <h3>{{$key}}</h3>
                   </div>
                 </div>
               </div>
-              <div class="row">
+
+              <div class="row ">
                   @foreach($guns as $gun => $datalhes)
                 
                   <div class="col-md-4 col-sm-4 col-xs-12 mb-4">  

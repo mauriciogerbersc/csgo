@@ -14,18 +14,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'IndexController@index');
-Route::get('/skins/{gun}', 'IndexController@readJSON');
+Route::get('/skins/{gun}/{type}', 'IndexController@readJSON');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/weapons/{gun}', 'IndexController@weapon')->name('weapon');
 
-Route::get('/pistols', 'IndexController@pistols')->name('pistols');
+/*Route::get('/pistols', 'IndexController@pistols')->name('pistols');
 
 
 Route::get('/smgs', 'IndexController@smgs')->name('smgs');
 Route::get('/heavy', 'IndexController@heavy')->name('heavy');
-Route::get('/rifles', 'IndexController@rifles')->name('rifles');
+Route::get('/rifles', 'IndexController@rifles')->name('rifles');*/
 Route::post('/gunsearch', 'IndexController@search')->name('gunsearch');
 
 Route::get('/admin', 'AdminController@index');
