@@ -10,6 +10,12 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
 
+.filter_category  a {
+    color: #fff !important;
+    text-transform:none; 
+}
+
+
 p {
     margin: 0 0 15px;
     color: #c4d5f6;
@@ -150,7 +156,7 @@ ul {
 }
 .active_class {
     position: relative;
-    color: #ff3366 !important;
+    color: #ffb400 !important;
 }
 
 .hs_lang_wrapper {
@@ -221,8 +227,8 @@ ul {
 
 .s-menu {
     padding: 10px 20px;
-    border: 1px solid #d5057f;
-    background: #d5057f;
+    border: 1px solid #ffb400;
+    background: #ffb400;
     color: #fff;
     transition: 0.4s;
     font-size: 15px;
@@ -347,4 +353,31 @@ ul {
     background: #5686ff;
     text-decoration:underline;
     cursor: pointer;
+}
+
+
+/***search section */
+.filter_sidebar {
+
+    margin-bottom: 30px;
+}
+
+.jb_cover {
+    display: flow-root;
+    width: 100%;
+}
+.filter_header {
+    padding: 18px 25px;
+
+    background: #0EC929;
+}
+.filter_header h1 {
+    color: #fff;
+    font-size: 16px;
+    margin:0 !important;
+    text-transform: uppercase;
+}
+
+.filter_category {
+    padding: 25px;
 }

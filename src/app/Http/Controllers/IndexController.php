@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Gun;
-
+use App\CategoriaArma;
 class IndexController extends Controller
 {
 
@@ -167,13 +167,63 @@ class IndexController extends Controller
         echo json_encode($data);
     }
 
+    public function weapon(Request $request){
+        $type = $request->gun;
+
+        $order_by = "guns.name";
+
+        if($request->query('price')){
+           $price = $request->query('price');
+
+           $order_by = "gun_price $price";
+        }
+
+        if($request->query('award')){
+            $award = $request->query('award');
+ 
+            $order_by = "award $award";
+         }
+
+        if($request->query('damage')){
+            $damage = $request->query('damage');
+ 
+            $order_by = "damage $damage";
+        }
+
+        if($request->query('firerate')){
+            $firerate = $request->query('firerate');
+ 
+            $order_by = "firerate $firerate";
+        }
+
+        if($request->query('accurate')){
+            $accurate_range = $request->query('accurate');
+ 
+            $order_by = "accurate_range $accurate_range";
+        }
+
+        if($request->query('armor')){
+            $armor_penetration = $request->query('armor');
+ 
+            $order_by = "armor_penetration $armor_penetration";
+        }
+
+        $weapons = CategoriaArma::where('categoria', 'LIKE', $request->gun)
+                                ->join('guns', 'categoria_id', '=', 'categoria_armas.id')
+                                ->orderByRaw($order_by)
+                                ->get();
+                               
+        return view('guns.gun',compact('weapons','type'));
+    }
     /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function pistols()
+    public function pistols(Request $request)
     {
+        $filter = $request->query('price');
+        
         $pistols = Gun::where('categoria_id', '=' , 1)->get();
         return view('guns.pistols', compact('pistols'));
     }

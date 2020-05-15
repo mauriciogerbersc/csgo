@@ -18,7 +18,11 @@ Route::get('/skins/{gun}', 'IndexController@readJSON');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/weapons/{gun}', 'IndexController@weapon')->name('weapon');
+
 Route::get('/pistols', 'IndexController@pistols')->name('pistols');
+
+
 Route::get('/smgs', 'IndexController@smgs')->name('smgs');
 Route::get('/heavy', 'IndexController@heavy')->name('heavy');
 Route::get('/rifles', 'IndexController@rifles')->name('rifles');

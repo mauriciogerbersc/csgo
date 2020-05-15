@@ -86,16 +86,16 @@
               <div class="mainmenu d-xl-block d-lg-block d-md-none d-sm-none d-none">
                   <ul class="main_nav_ul">
                       <li class="has-mega gc_main_navigation">
-                        <a  @if($current=="pistols" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="{{ route('pistols') }}">Pistols</a>
+                        <a  @if($current=="pistols" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="/weapons/pistols">Pistols</a>
                       </li>
                       <li class="has-mega gc_main_navigation">
-                        <a @if($current=="smgs" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="{{ route('smgs') }}">SMGs</a>
+                        <a @if($current=="smgs" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="/weapons/smgs">SMGs</a>
                       </li>
                       <li class="has-mega gc_main_navigation">
-                        <a @if($current=="heavy" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="{{ route('heavy') }}">Heavys</a>
+                        <a @if($current=="heavy" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="/weapons/heavy">Heavys</a>
                       </li>
                       <li class="has-mega gc_main_navigation">
-                        <a @if($current=="rifles" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="{{ route('rifles') }}">Rifles</a>
+                        <a @if($current=="rifles" ) class="gc_main_navigation active_class" @else class="gc_main_navigation" @endif href="/weapons/rifles">Rifles</a>
                       </li>
                   </ul>
               </div>
