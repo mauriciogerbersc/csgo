@@ -11,7 +11,7 @@
 
 
      <!-- Bootstrap core CSS -->
-     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+     <link href="https://csgocompare.com/css/css/bootstrap.min.css" rel="stylesheet">
      <link href="{{ URL::asset('css/fonts.css') }}" rel="stylesheet">
      <link href="{{ URL::asset('css/font-awesome.css') }}" rel="stylesheet">
      <link href="{{ URL::asset('css/default.css') }}" rel="stylesheet">
