@@ -42,7 +42,7 @@
       <div class="container-fluid">
           <div class="cp_logo_wrapper">
               <a href="/">
-                <img src="{{ asset('img/logo.png') }}" width="180" alt="">
+                <img src="{{ secure_asset('img/logo.png') }}" width="180" alt="">
               </a>
           </div>
           <!-- mobile menu area start -->
