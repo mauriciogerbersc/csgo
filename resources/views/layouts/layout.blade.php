@@ -11,10 +11,10 @@
 
 
      <!-- Bootstrap core CSS -->
-    <link href="{{ secure_asset('css/bootstrap.min.css') }}" rel="stylesheet">
-    <link href="{{ secure_asset('css/fonts.css') }}" rel="stylesheet">
-    <link  href="{{ secure_asset('css/font-awesome.css') }}" rel="stylesheet" type="text/css" />
-    <link href="{{ secure_asset('css/default.css') }}" rel="stylesheet">
+     <link href="{{ URL::asset('css/bootstrap.min.css') }}" rel="stylesheet">
+     <link href="{{ URL::asset('css/fonts.css') }}" rel="stylesheet">
+     <link href="{{ URL::asset('css/font-awesome.css') }}" rel="stylesheet">
+     <link href="{{ URL::asset('css/default.css') }}" rel="stylesheet">
 
   </head>
   <body>
